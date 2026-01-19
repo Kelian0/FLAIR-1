@@ -162,7 +162,7 @@ Note: A notebook is available in the legacy-torch branch (which uses different l
 This module aims to infer a pre-trained model at a larger scale than individual patches. It allows overlapping inferences using a margin argument. Specifically, this module expects a single georeferenced TIFF file as input.
 
 ```bash
-flair-detect --conf=/my/conf/file-detect.yaml
+flair-detect --conf=configs/flair-1-config-detect.yaml
 ```
 
 <br><br>

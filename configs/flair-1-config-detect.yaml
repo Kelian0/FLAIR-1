@@ -1,18 +1,18 @@
-output_path:
-output_name:
+output_path: Output
+output_name: Testing_rgbi
 
-input_img_path: ../path/to/raster/file.tif
-channels: [1, 2, 3, 4, 5]
+input_img_path: Testing-tif-images\FINAL_LAMBERT.tiff
+channels: [1, 2, 3, 4]
 
 img_pixels_detection: 512
 margin: 128
-output_type: "argmax"
+output_type: "class_prob"
 n_classes: 19
 
 
-model_weights: ../path/to/model/weights.pth  #e.g., FLAIR-INC_rgbie_15cl_resnet34-unet_weights.pth
+model_weights: pretrained-models\FLAIR-INC_rgbi_15cl_resnet34-unet_weights.pth  #e.g., FLAIR-INC_rgbie_15cl_resnet34-unet_weights.pth
 model_framework: 
-    model_provider: HuggingFace
+    model_provider: SegmentationModelsPytorch
     
     HuggingFace:
         org_model: openmmlab/upernet-swin-small
@@ -22,11 +22,11 @@ model_framework:
 
 batch_size: 4
 use_gpu: true
-num_worker: 2
+num_worker: 0
 
 write_dataframe: False
 
 norma_task: 
   - norm_type: custom 
-    norm_means: [105.08, 110.87, 101.82, 106.38, 53.26]
-    norm_stds: [52.17, 45.38, 44, 39.69, 79.3]
+    norm_means: [97.28, 99.35, 94.81, 105.34] #12.99
+    norm_stds: [44.15, 48.93, 51.47, 47.48] #19.89
