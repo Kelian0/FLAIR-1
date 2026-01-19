@@ -1,3 +1,17 @@
+settings.json
+
+# Output
+*.tif
+*.tiff
+*.tif.aux.xml
+
+# Pre-trained models 
+*.pth
+
+# Images
+*.png
+*.tiff.aux.xml
+
 # Byte-compiled / optimized / DLL files
 .idea
 .idea/*
